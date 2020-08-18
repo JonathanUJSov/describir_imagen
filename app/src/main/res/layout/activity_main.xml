@@ -10,11 +10,12 @@
         android:id="@+id/txtTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¿Qué ves en la imagen?"
+        android:text="@string/titulo_juego"
+        android:textColor="@color/gris"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/espacio_elementos"
         />
     <ImageView
         android:id="@+id/image"
@@ -23,7 +24,7 @@
         app:layout_constraintTop_toBottomOf="@+id/txtTitle"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/espacio_elementos"
         android:src="@drawable/zorro"
         />
     <EditText
@@ -40,6 +41,7 @@
         android:inputType="text"/>
     <Button
         android:id="@+id/btnComprobar"
+        style="@style/btn_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Comprobar"
@@ -50,6 +52,7 @@
         />
     <Button
         android:id="@+id/btnReinicar"
+        style="@style/btn_style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Reiniciar"
