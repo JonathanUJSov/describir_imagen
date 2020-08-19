@@ -61,5 +61,26 @@
         app:layout_constraintLeft_toRightOf="@+id/btnComprobar"
         android:layout_marginTop="20dp"
         />
+    <EditText
+        android:id="@+id/editNewActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/btnReinicar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="@dimen/espacio_elementos"
+        android:layout_marginRight="@dimen/espacio_elementos"
+        android:layout_marginTop="@dimen/espacio_elementos"
+        android:hint="Ingresar texto"/>
+    <Button
+        android:id="@+id/btnNvoActivity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Llamar nuevo Activity"
+        app:layout_constraintTop_toBottomOf="@+id/editNewActivity"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="@dimen/espacio_elementos"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

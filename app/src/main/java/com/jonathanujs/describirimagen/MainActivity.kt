@@ -1,5 +1,6 @@
 package com.jonathanujs.describirimagen
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -9,9 +10,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         btnReinicar.isEnabled = false;
         btnComprobar.setOnClickListener { validateResp() }
         btnReinicar.setOnClickListener { restar() }
+
+        btnNvoActivity.setOnClickListener {
+            val textoIngresado = editNewActivity.text.toString();
+            val intent = Intent(this,ResultadoActivity::class.java);
+            intent.putExtra("palabra_ingresada", textoIngresado);
+            startActivity(intent);
+        }
+
     }
 
     val listValues = arrayOf("Zorra", "Zorro", "zorra", "zorro", "ZORRO", "ZORRA");
